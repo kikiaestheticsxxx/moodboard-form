@@ -1,0 +1,125 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Order Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff6f7;
+      color: #7B3F46;
+      padding: 20px;
+      max-width: 500px;
+      margin: auto;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input, select, textarea, button {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #f5bfc5;
+      border-radius: 8px;
+      font-size: 14px;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    button {
+      background: #fadadd;
+      color: #7B3F46;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+      margin-top: 15px;
+      box-shadow: 0 4px 10px rgba(250, 218, 221, 0.5);
+    }
+
+    button:hover {
+      background: #f5bfc5;
+    }
+
+    .checkbox-label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 15px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: 15px;
+    }
+
+    .gallery-item {
+      background: #fadadd;
+      color: #7B3F46;
+      border-radius: 14px;
+      padding: 20px 12px;
+      text-align: center;
+      font-weight: 600;
+      font-size: 14px;
+      box-shadow: 0 4px 10px rgba(250, 218, 221, 0.5);
+      user-select: none;
+    }
+
+    a {
+      color: #F5BFC5;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1>Order Your Moodboard 💌</h1>
+  <form action="https://formspree.io/f/xgvzrpeo" method="POST">
+    <label for="board-type">Board Type *</label>
+    <select id="board-type" name="board-type" required>
+      <option value="" disabled selected>Select one</option>
+      <option value="Standard (15 pins) - 7€ per board">Standard (15 pins) - 7€ per board</option>
+      <option value="Standard Pro (40 pins) - 10€ per board">Standard Pro (40 pins) - 10€ per board</option>
+      <option value="Extended / Deluxe (50-100 pins) - 15€ per board">Extended / Deluxe (50-100 pins) - 15€ per board</option>
+    </select>
+
+    <label for="quantity">Quantity *</label>
+    <input type="number" id="quantity" name="quantity" min="1" max="10" required value="1" />
+
+    <label for="vibe">Theme / Vibe Description *</label>
+    <textarea id="vibe" name="vibe" required placeholder="Describe the mood or theme you want"></textarea>
+
+    <label for="payment">Preferred Payment Method *</label>
+    <select id="payment" name="payment" required>
+      <option value="" disabled selected>Select one</option>
+      <option value="PayPal (Friends & Family)">PayPal (Friends & Family)</option>
+    </select>
+
+    <label for="notes">Additional Notes</label>
+    <textarea id="notes" name="notes" placeholder="Anything else you'd like me to know?"></textarea>
+
+    <label class="checkbox-label">
+      <input type="checkbox" id="consent" name="consent" required />
+      I agree to share necessary info for my moodboard and understand my privacy is respected.
+    </label>
+
+    <button type="submit">Send Order 💌</button>
+  </form>
+</body>
+</html>
