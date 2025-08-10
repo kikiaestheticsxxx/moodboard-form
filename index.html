@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Kiki Moodboards Orders</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Moodboards by Kiki 💌✨ Order Form</title>
+  <style>
+    body {
+      background: #fdfbf9;
+      font-family: 'Nunito', sans-serif;
+      color: #333;
+      padding: 20px;
+      max-width: 600px;
+      margin: auto;
+    }
+    h1, h2 {
+      font-family: 'Lora', serif;
+      color: #f5bfc5;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 0.2em;
+    }
+    form {
+      background: #fff8f9;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(250, 218, 221, 0.5);
+    }
+    label {
+      display: block;
+      margin: 15px 0 6px;
+      font-weight: 600;
+      color: #7b3f46;
+    }
+    input[type="text"],
+    input[type="number"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 2px solid #fadadd;
+      border-radius: 10px;
+      font-size: 1em;
+      font-family: 'Nunito', sans-serif;
+      resize: vertical;
+      box-sizing: border-box;
+    }
+    textarea {
+      min-height: 80px;
+    }
+    input[type="checkbox"] {
+      width: auto;
+      margin-right: 8px;
+    }
+    .checkbox-label {
+      display: flex;
+      align-items: center;
+      font-weight: 600;
+      color: #7b3f46;
+      margin-top: 15px;
+    }
+    button {
+      background: #f5bfc5;
+      color: white;
+      border: none;
+      padding: 15px 25px;
+      border-radius: 30px;
+      font-size: 1.2em;
+      font-weight: 700;
+      cursor: pointer;
+      margin-top: 20px;
+      width: 100%;
+      box-shadow: 0 4px 10px rgba(245, 191, 197, 0.6);
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background: #f89aa1;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Moodboards by Kiki 💌✨</h1>
+  <h2>Order Form</h2>
+  <p>Please fill out this form to request your custom Pinterest moodboard. Delivery time: 1–4 days ✨</p>
+
+  <form action="https://formspree.io/f/xgvzrpeo" method="POST">
+    <label for="name">Name / Instagram Handle *</label>
+    <input type="text" id="name" name="name" required placeholder="Your name or IG handle" />
+
+    <label for="board-type">Board Type *</label>
+    <select id="board-type" name="board-type" required>
+      <option value="" disabled selected>Select one</option>
+      <option value="Standard (15 pins) - 7€ pro board">Standard (15 pins) - 7€ pro board</option>
+      <option value="Standard Pro (40 pins) - 10€ pro board">Standard Pro (40 pins) - 10€ pro board</option>
+      <option value="Extended / Deluxe (50-100 pins) - 15€ pro board">Extended / Deluxe (50-100 pins) - 15€ pro board</option>
+    </select>
+
+    <label for="quantity">Quantity *</label>
+    <input type="number" id="quantity" name="quantity" min="1" max="10" required value="1" />
+
+    <label for="vibe">Theme / Vibe Description *</label>
+    <textarea id="vibe" name="vibe" required placeholder="Describe the mood or theme you want"></textarea>
+
+    <label for="payment">Preferred Payment Method *</label>
+    <select id="payment" name="payment" required>
+      <option value="" disabled selected>Select one</option>
+      <option value="Ko-fi">Ko-fi</option>
+      <option value="PayPal (Friends & Family)">PayPal (Friends & Family)</option>
+    </select>
+
+    <label for="notes">Additional Notes</label>
+    <textarea id="notes" name="notes" placeholder="Anything else you'd like me to know?"></textarea>
+
+    <label class="checkbox-label">
+      <input type="checkbox" id="consent" name="consent" required />
+      I agree to share necessary info for my moodboard and understand my privacy is respected.
+    </label>
+
+    <button type="submit">Send Order 💌</button>
+  </form>
+
+</body>
+</html>
+<!-- partial -->
+  
+</body>
+</html>
